@@ -1,0 +1,7 @@
+require("config.options")
+-- require("config.autocommands")
+-- require("config.keymaps")
+require("config.lazy")
+-- require("config.lualine")
+-- require("config.toggleterm")
+-- require("config.nvim-tree")
