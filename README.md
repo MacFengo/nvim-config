@@ -55,3 +55,8 @@ I added a short command: <leader>nt to toggle the fileystem window (if it's open
 <leader>nf to focus (and if needed open) the filesystem
 To add files/directories inside of the filesystem use: 'a' for 'add'
 
+## LSP: Language Server Protocol
+using mason: https://github.com/mason-org/mason.nvim
+Servers can be installed using :Mason but also configured in tbd!!!
+
+
