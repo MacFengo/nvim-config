@@ -61,3 +61,7 @@ Servers can be installed using :Mason. I didn't find a good source for which lan
 
 In general: You choose a Server, Install it via Mason and then you need to add it to lsp-config. I might improve this later on!
 Currently I added support for C and C++ (and Lua)
+
+## Dashboard
+added a dashboard from: https://github.com/goolord/alpha-nvim
+there are also different themes. Check it out of interested. I liked this version the most!
