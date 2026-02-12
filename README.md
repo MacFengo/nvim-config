@@ -1,3 +1,8 @@
+## VIM COMMANDS:
+
+select and configure text segments:
+https://stackoverflow.com/questions/17890904/how-do-you-select-text-in-vim
+
 ## LEADER KEY
 more information here:
 https://gist.github.com/subfuzion/7d00a6c919eeffaf6d3dbf9a4eb11d64
@@ -42,3 +47,11 @@ Because no human is capable of remembering all the keybindings just by reading t
 I added the plugin "which-key": https://github.com/folke/which-key.nvim
 This Plugin shows you the possible follows to the just pressed key in a box at the bottom.
 If you want to disable that, just remove the file "which-key.lua"
+
+## Filesystem (Neo-Tree)
+Using neo-tree: https://github.com/nvim-neo-tree/neo-tree.nvim
+The filesystem can be opened by using: ':Neotree'
+I added a short command: <leader>nt to toggle the fileystem window (if it's opened this way, it's also focused). Can be changed in the keymaps.lua config file
+<leader>nf to focus (and if needed open) the filesystem
+To add files/directories inside of the filesystem use: 'a' for 'add'
+
