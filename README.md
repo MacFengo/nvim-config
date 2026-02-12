@@ -57,6 +57,7 @@ To add files/directories inside of the filesystem use: 'a' for 'add'
 
 ## LSP: Language Server Protocol
 using mason: https://github.com/mason-org/mason.nvim
-Servers can be installed using :Mason but also configured in tbd!!!
+Servers can be installed using :Mason. I didn't find a good source for which language corresponds to which server yet :/
 
-
+In general: You choose a Server, Install it via Mason and then you need to add it to lsp-config. I might improve this later on!
+Currently I added support for C and C++ (and Lua)
