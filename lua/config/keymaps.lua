@@ -20,7 +20,23 @@ opts.desc = "Make splits equal size"
 keymap.set("n", "<leader>se", "<C-w>=", opts)
 
 opts.desc = "Close current split"
-keymap.set("n", "<leader>sq", "<C-W>q", opts)
+keymap.set("n", "<leader>sq", "<C-w>q", opts)
+
+-- changing between splits
+
+opts.desc = "Switch to split on the left"
+keymap.set("n", "<C-h>", "<C-w>h", opts)
+
+opts.desc = "Switch to split on the bottom (down)"
+keymap.set("n", "<C-j>", "<C-w>j", opts)
+
+opts.desc = "Switch to split on the top (up)"
+keymap.set("n", "<C-k>", "<C-w>k", opts)
+
+opts.desc = "Switch to split on the right"
+keymap.set("n", "<C-l>", "<C-w>l", opts)
+
+
 
 
 -- save with Ctrl + s

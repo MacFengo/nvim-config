@@ -3,12 +3,19 @@
 select and configure text segments:
 https://stackoverflow.com/questions/17890904/how-do-you-select-text-in-vim
 
-use :qa to quit everything(all) and not get stuck in the files
+use :qa to quit everything(all) and not get stuck in the filesystem
 
 To open window commands use: <Ctrl>w
 I remapped some of the commands: (just press <leader>s and you will see the options :D)
 <leader>sv - splits window vertically
 <leader>sh - splits window horizontally
+<leader>sq - to close split
+
+To switch between splits use:
+<Ctrl>h: left
+<Ctrl>j: down
+<Ctrl>k: up
+<Ctrl>l: right
 
 I added the option of using Ctrl + s to save the current document. It will automatically reenter insert mode. (Also it can only be used inside of insert mode)
 
@@ -72,8 +79,10 @@ I added a short command: <leader>nt to toggle the fileystem window (if it's open
 To add files/directories inside of the filesystem use: 'a' for 'add'
 
 to open the selected file as a split use: s and S
-s: vertically
-S: horizontally
+s: vertically    (small s)
+S: horizontally  (big S)
+
+to open it in a new tab: 't'
 
 ## LSP: Language Server Protocol
 using mason: https://github.com/mason-org/mason.nvim
