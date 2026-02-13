@@ -3,6 +3,8 @@
 select and configure text segments:
 https://stackoverflow.com/questions/17890904/how-do-you-select-text-in-vim
 
+use :qa to quit everything(all) and not get stuck in the files
+
 ## LEADER KEY
 more information here:
 https://gist.github.com/subfuzion/7d00a6c919eeffaf6d3dbf9a4eb11d64
@@ -59,9 +61,30 @@ To add files/directories inside of the filesystem use: 'a' for 'add'
 using mason: https://github.com/mason-org/mason.nvim
 Servers can be installed using :Mason. I didn't find a good source for which language corresponds to which server yet :/
 
-In general: You choose a Server, Install it via Mason and then you need to add it to lsp-config. I might improve this later on!
-Currently I added support for C and C++ (and Lua)
+In general: 
+You can edit the lsp-plugin.lua file under plugins. Add the Language servers you want under the "ensured_installed" section!
+Other more complicated option: You choose a Server, Install it via Mason (:Mason) and then you need to add it to lsp-config, this way you don't have to write the config yourself.
+Important: don't change the order the plugins are loaded, lsp-config has to come last!
 
+Currently I added support for C, C++ and Lua (scripting language of nvim).
+
+Autocompletion automatically pops up if the language requests it (e.g. after a dot '.').
+Or you can just use Ctrl + Space, which should be known from e.g. VS Code. (This can be configured as well obviously - in keymaps.lua)
+
+Default buildin Commands:
+while something press: K (shift + k) to open the documentation
+also you can press grn: to rename the function
+
+more can be found here: https://neovim.io/doc/user/lsp.html#_defaults
+
+Commands I added from different sources:
+<leader>D shows the diagnostics buffer of the code. -> that means warnings, errors etc. What you would see if you hovered a warning/error in vscode but for the whole file
+<leader>d shows the diagnostics only for the current line, exactly what you would see when hovering a line
+with '\[d' and 'd\]' you can jump to the previous and to the next diagnostic in the buffer.
+
+Also if you don't want to see inlay hints, you can also disable them in the config (keymaps)!
+
+additionally, if you want different symbols for error markins etc. in the code. You can configure them there as well!
 ## Dashboard
 added a dashboard from: https://github.com/goolord/alpha-nvim
 there are also different themes. Check it out of interested. I liked this version the most!

@@ -1,42 +1,20 @@
 
-  -- copied this from website: https://neovim.io/doc/user/lsp.html#lsp-config
-vim.lsp.config['lua_ls'] = {
-  -- Command and arguments to start the server.
-  cmd = { 'lua-language-server' },
-  -- Filetypes to automatically attach to.
-  filetypes = { 'lua' },
-  -- Sets the "workspace" to the directory where any of these files is found.
-  -- Files that share a root directory will reuse the LSP server connection.
-  -- Nested lists indicate equal priority, see |vim.lsp.Config|.
-  root_markers = { { '.luarc.json', '.luarc.jsonc' }, '.git' },
-  -- Specific settings to send to the server. The schema is server-defined.
-  -- Example: https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
-  settings = {
-    Lua = {
-      runtime = {
-        version = 'LuaJIT',
-      }
-    }
-  }
-}
-
+-- not used anymore, but kept incase you ever want to use a server without using mason-org/mason-lspconfig.nvim
 -- enable lua_ls
-vim.lsp.enable('lua_ls')
+--vim.lsp.enable('lua_ls')
 
--- add clang
-vim.lsp.config['clangd'] = {
 
-  cmd = { 'clangd' },
-  filetypes = { 'c', 'cpp', 'h', 'hpp' }
-  
+-- enable clangd
+--vim.lsp.enable('clangd')
 
-}
 
-vim.lsp.enable('clangd')
-
+-- a lot of the keymaps here comes from this page: https://github.com/josean-dev/dev-environment-files/blob/main/.config/nvim/lua/josean/lsp.lua
 vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function(ev)
-    local client = vim.lsp.get_client_by_id(ev.data.client_id) 
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)  
+
+    -- enable text completion
     if client:supports_method('textDocument/completion') then
       vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy', 'popup' }
       vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
