@@ -5,6 +5,20 @@ https://stackoverflow.com/questions/17890904/how-do-you-select-text-in-vim
 
 use :qa to quit everything(all) and not get stuck in the files
 
+To open window commands use: <Ctrl>w
+I remapped some of the commands: (just press <leader>s and you will see the options :D)
+<leader>sv - splits window vertically
+<leader>sh - splits window horizontally
+
+I added the option of using Ctrl + s to save the current document. It will automatically reenter insert mode. (Also it can only be used inside of insert mode)
+
+Ctrl + w inside of insert to delete current content of line, or line if empty
+
+Using Tabs:
+I remapped the commands to:
+<leader>t
+Just read through them. Can also be changed! (obviously)
+
 ## LEADER KEY
 more information here:
 https://gist.github.com/subfuzion/7d00a6c919eeffaf6d3dbf9a4eb11d64
@@ -56,6 +70,10 @@ The filesystem can be opened by using: ':Neotree'
 I added a short command: <leader>nt to toggle the fileystem window (if it's opened this way, it's also focused). Can be changed in the keymaps.lua config file
 <leader>nf to focus (and if needed open) the filesystem
 To add files/directories inside of the filesystem use: 'a' for 'add'
+
+to open the selected file as a split use: s and S
+s: vertically
+S: horizontally
 
 ## LSP: Language Server Protocol
 using mason: https://github.com/mason-org/mason.nvim

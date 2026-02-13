@@ -8,6 +8,40 @@ local keymap = vim.keymap -- for easier typing
 vim.g.mapleader      = ';'
 vim.g.maplocalleader = ';'
 
+-- inspiration: https://github.com/josean-dev/dev-environment-files/blob/main/.config/nvim/lua/josean/core/keymaps.lua
+-- window management
+opts.desc = "Split window vertically"
+keymap.set("n", "<leader>sv", "<C-w>v", opts)
+
+opts.desc = "Split window horizontally"
+keymap.set("n", "<leader>sh", "<C-w>s", opts)
+
+opts.desc = "Make splits equal size" 
+keymap.set("n", "<leader>se", "<C-w>=", opts)
+
+opts.desc = "Close current split"
+keymap.set("n", "<leader>sq", "<C-W>q", opts)
+
+
+-- save with Ctrl + s
+keymap.set("i", "<C-s>", "<esc><cmd>w<CR>i", opts)
+
+
+
+-- tab management
+
+opts.desc = "Open new tab"
+keymap.set("n", "<leader>tt", "<cmd>tabnew<CR>", opts) -- open a new tab
+
+opts.desc = "Close current tab"
+keymap.set("n", "<leader>tw", "<cmd>tabclose<CR>", opts) -- close current tab
+
+opts.desc = "Go to [n]ext tab"
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", opts) -- go to next tab
+
+opts.desc = "Go to [p]revious tab"
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", opts) -- go to previous tab
+
 
 -- telescope
 
@@ -23,6 +57,7 @@ keymap.set('i', '<C-Space>', function()
   vim.lsp.completion.get()
 end)
 
+-- ===================================================================
 -- key maps for LSP usage
 
 local opts = { silent = true }
