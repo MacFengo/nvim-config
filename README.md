@@ -57,13 +57,15 @@ Although I can't exactly explain what this is, I included it. It creates abstrac
 You can add Language support or something like that for unsupported languages.
 Link to the supported Languages that can ve added in the config (nvim-treesitter-config.lua in /.config/nvim/lua/config/): https://github.com/nvim-treesitter/nvim-treesitter/blob/main/SUPPORTED_LANGUAGES.md
 
-I've also added folding for functions etc. (einklappen)
+I've also added folding for functions etc. (german: einklappen)
 You can turn this off my commeting the corresponding line in the config.
 
 The commands to toggle Folding are:
 zR: open all folded
 zM: close all open folded
 za: toggle the fold at the cursor (not your mouse cursor ;D )
+
+Folds are currently open on entry. You can changes this by removing the line in options.lua
 
 ## Which-Key
 Because no human is capable of remembering all the keybindings just by reading them once.
@@ -115,3 +117,18 @@ additionally, if you want different symbols for error markins etc. in the code. 
 ## Dashboard
 added a dashboard from: https://github.com/goolord/alpha-nvim
 there are also different themes. Check it out of interested. I liked this version the most!
+
+## autopairs
+does what the name says. Creates autopairs! e.g. when typing " it will make it "<your cursor is here>"
+
+## The Terminal incident:
+https://neovim.io/doc/user/terminal.html
+There are default options for terminals in neovim. Like: ':terminal'
+To exit this terminal you have to press <Ctrl>\ and <Ctrl>n for returning to normal mode
+
+I decided to use: https://github.com/akinsho/toggleterm.nvim
+Also I added the mapping to toggle the terminal with <Ctrl>\ because <Ctrl>' is already occupied.
+
+I decided on this being a float window because I liked it! (can be changed)
+
+

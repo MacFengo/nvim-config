@@ -36,13 +36,8 @@ keymap.set("n", "<C-k>", "<C-w>k", opts)
 opts.desc = "Switch to split on the right"
 keymap.set("n", "<C-l>", "<C-w>l", opts)
 
-
-
-
 -- save with Ctrl + s
 keymap.set("i", "<C-s>", "<esc><cmd>w<CR>i", opts)
-
-
 
 -- tab management
 
@@ -132,3 +127,13 @@ vim.diagnostic.config({
     },
   },
 })
+
+
+
+-- terminal
+opts.desc = "Open and Close Terminal"
+keymap.set({"n", "t", "i"}, "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", opts)
+
+
+
+

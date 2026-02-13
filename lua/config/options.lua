@@ -80,3 +80,7 @@ vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- separate vim plugins fr
 
 -- default border for all floating windows
 vim.opt.winborder = "rounded"
+
+-- start with open folds, remove this line if you want them all to be closed
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
