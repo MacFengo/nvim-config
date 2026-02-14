@@ -26,6 +26,10 @@ I remapped the commands to:
 <leader>t
 Just read through them. Can also be changed! (obviously)
 
+https://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
+To go to a functions definition:
+<Ctrl>]
+
 ## LEADER KEY
 more information here:
 https://gist.github.com/subfuzion/7d00a6c919eeffaf6d3dbf9a4eb11d64
@@ -72,6 +76,8 @@ Because no human is capable of remembering all the keybindings just by reading t
 I added the plugin "which-key": https://github.com/folke/which-key.nvim
 This Plugin shows you the possible follows to the just pressed key in a box at the bottom.
 If you want to disable that, just remove the file "which-key.lua"
+
+i added a config in which you can also specifiy groups for your keymaps. Such that pressing <leader>b whill e.g. tell you these are debugger commands.
 
 ## Filesystem (Neo-Tree)
 Using neo-tree: https://github.com/nvim-neo-tree/neo-tree.nvim
@@ -130,5 +136,16 @@ I decided to use: https://github.com/akinsho/toggleterm.nvim
 Also I added the mapping to toggle the terminal with <Ctrl>\ because <Ctrl>' is already occupied.
 
 I decided on this being a float window because I liked it! (can be changed)
+
+## THE Debugger
+using:
+https://github.com/mfussenegger/nvim-dap
+https://github.com/rcarriga/nvim-dap-ui
+https://github.com/nvim-neotest/nvim-nio
+https://github.com/jay-babu/mason-nvim-dap.nvim
+https://github.com/theHamsta/nvim-dap-virtual-text
+
+the associated config file is: config/debugger.lua. There all the keybinds are set as well due to execution order requirements
+Currently the leader is set to 'b' for the debugger. <leader>b will open the information!
 
 

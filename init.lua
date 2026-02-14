@@ -6,3 +6,5 @@ require("config.nvim-telescope")
 require("config.lualine")
 require("config.nvim-treesitter-config")
 require("config.lsp-config")
+require("config.debugger")
+require("config.whichkey") -- for which key mapping informations
