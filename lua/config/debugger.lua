@@ -49,7 +49,6 @@ dap.configurations.c = {
     args = {}, -- provide arguments if needed
     cwd = "${workspaceFolder}",
     runInTerminal = true,
-    externalConsole = true,
     stopAtBeginningOfMainSubprogram = true,
   }
 }
@@ -84,14 +83,10 @@ local opts = {noremap = true, silent = true}
 opts.desc = "Toggle Breakpoint"
 vim.keymap.set("n", "<leader>bb", dap.toggle_breakpoint, opts)
 
-opts.desc = "Continue"
-vim.keymap.set("n", "<leader>bc", dap.continue, opts)
-
-opts.desc = "Step Into"
-vim.keymap.set("n", "<leader>bi", dap.step_into, opts)
-
-opts.desc = "Step Out"
-vim.keymap.set("n", "<leader>bo", dap.step_out, opts)
+vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
+vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
+vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
+vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
 
 opts.desc = "Terminate"
 vim.keymap.set("n", "<leader>bq", function ()
