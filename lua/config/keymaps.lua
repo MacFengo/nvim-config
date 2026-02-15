@@ -111,6 +111,13 @@ keymap.set("n", "]d", function ()
   vim.diagnostic.jump({ count = 1, float = true})
 end, opts) -- jump to the next diagnostic in the buffer
 
+opts.desc = "go to declaration"
+keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opts)
+
+opts.desc = "go to definition"
+keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts)
+
+
 -- inlay hints, tells you which function argument (the name) the one you provided to it corresponds to. You can disable/enable depending on your preference
 vim.lsp.inlay_hint.enable(true)
 

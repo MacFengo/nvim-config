@@ -120,6 +120,11 @@ with '\[d' and 'd\]' you can jump to the previous and to the next diagnostic in 
 Also if you don't want to see inlay hints, you can also disable them in the config (keymaps)!
 
 additionally, if you want different symbols for error markins etc. in the code. You can configure them there as well!
+
+How to jump to a declaration/definition of a variable/struct/class etc.?
+<leader>g + D/d (see text)
+
+
 ## Dashboard
 added a dashboard from: https://github.com/goolord/alpha-nvim
 there are also different themes. Check it out of interested. I liked this version the most!
@@ -148,4 +153,4 @@ https://github.com/theHamsta/nvim-dap-virtual-text
 the associated config file is: config/debugger.lua. There all the keybinds are set as well due to execution order requirements
 Currently the leader is set to 'b' for the debugger. <leader>b will open the information!
 
-
+https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
