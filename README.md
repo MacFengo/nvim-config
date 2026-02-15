@@ -124,6 +124,7 @@ additionally, if you want different symbols for error markins etc. in the code. 
 How to jump to a declaration/definition of a variable/struct/class etc.?
 <leader>g + D/d (see text)
 
+<leader>gt + D/d opens a new tab with the declaration/definition instead of opening it in the current tab!
 
 ## Dashboard
 added a dashboard from: https://github.com/goolord/alpha-nvim

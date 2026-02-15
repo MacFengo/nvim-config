@@ -83,11 +83,12 @@ keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- show lsp declaration
 opts.desc = "Show LSP definition"
 keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- show lsp definition
 
-opts.desc = "Show LSP implementations"
-keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+-- I don't know what these two ever did, because they just didn't work.....
+--opts.desc = "Show LSP implementations"
+--keymap.set("n", "<leader<gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 
-opts.desc = "Show LSP type definitions"
-keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+--opts.desc = "Show LSP type definitions"
+--keymap.set("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
 opts.desc = "See available code actions"
 keymap.set({"n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection!
@@ -117,6 +118,11 @@ keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opts)
 opts.desc = "go to definition"
 keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts)
 
+opts.desc = "go to DEClaration AND open in new tab"
+keymap.set("n", "<leader>gtD", "<cmd>tab split | lua vim.lsp.buf.declaration()<CR>", opts)
+
+opts.desc = "go to DEFinition AND open in new tab"
+keymap.set("n", "<leader>gtd", "<cmd>tab split | lua vim.lsp.buf.definition()<CR>", opts)
 
 -- inlay hints, tells you which function argument (the name) the one you provided to it corresponds to. You can disable/enable depending on your preference
 vim.lsp.inlay_hint.enable(true)
