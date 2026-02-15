@@ -1,3 +1,5 @@
+--[[
+
 -- copied from Linuxtage!!
 return {
 	"windwp/nvim-autopairs",
@@ -19,4 +21,4 @@ return {
 	end,
 }
 
-
+]]

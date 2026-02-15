@@ -131,7 +131,9 @@ added a dashboard from: https://github.com/goolord/alpha-nvim
 there are also different themes. Check it out of interested. I liked this version the most!
 
 ## autopairs
-does what the name says. Creates autopairs! e.g. when typing " it will make it "<your cursor is here>"
+// does what the name says. Creates autopairs! e.g. when typing " it will make it "<your cursor is here>"
+this is old. Now this is handled my mini.nvim pairs plugin!
+
 
 ## The Terminal incident:
 https://neovim.io/doc/user/terminal.html
@@ -155,3 +157,21 @@ the associated config file is: config/debugger.lua. There all the keybinds are s
 Currently the leader is set to 'b' for the debugger. <leader>b will open the information!
 
 https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
+
+## Mini.nvim
+
+since this is often required for other nice plugins I included it as well. Generally it should improve your NVIM Experience if you exploit it, if not it's fine as well!
+The parts explained by me, a Hochstapler:
+
+- mini.ai: improved a and i usage in visual mode. (Press va or vi and you will see)
+- mini-align: didn't work for me??!
+- mini-comment: something about comments
+- mini-completion: better completion? which doesn't really work due to my previous set up completion I think? Or it is not working for C...
+- mini-keymap: didn't work or I didn't understand it correctly
+ok...... I AM STUPIDDD. OFC I WOULD NEED TO CALL SETUP ON THE PLUGINS!!!!!. FORGET EVERYTHING I WROTE BEFORE THIS!!!!!!! They are all not valid :)
+
+The thing I enabled:
+- mini-move: enables moves with <alt>h/j/k/l
+- mini-pairs: does autopairs for ([{'""'}]), doesn't do them inside of comment lines!!
+
+

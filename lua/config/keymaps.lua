@@ -4,10 +4,6 @@ local term_opts = { silent = true }
 local keymap = vim.keymap -- for easier typing
 
 
--- leader
-vim.g.mapleader      = ';'
-vim.g.maplocalleader = ';'
-
 -- inspiration: https://github.com/josean-dev/dev-environment-files/blob/main/.config/nvim/lua/josean/core/keymaps.lua
 -- window management
 opts.desc = "Split window vertically"
@@ -146,9 +142,5 @@ vim.diagnostic.config({
 -- terminal
 opts.desc = "Open and Close Terminal"
 keymap.set({"n", "t", "i"}, "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", opts)
-
-
-
-
 
 
