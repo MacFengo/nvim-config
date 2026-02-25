@@ -138,8 +138,8 @@ How to jump to a declaration/definition of a variable/struct/class etc.?
 \<leader\>gt + D/d opens a new tab with the declaration/definition instead of opening it in the current tab! <br>
 
 ## Dashboard
-added a dashboard from: https://github.com/goolord/alpha-nvim
-there are also different themes. Check it out of interested. I liked this version the most! <br>
+using the dashboard from: https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md
+there are also different themes. Check it out of interested. I liked this version the most! But there is much to change, inside of "plugins/snacks.lua" <br>
 
 ## autopairs
 // does what the name says. Creates autopairs! e.g. when typing " it will make it "\<your cursor is here\>" <br>
@@ -191,3 +191,5 @@ The thing I enabled:
 If you want to add more, have a look at: https://github.com/nvim-mini/mini.nvim <br>
 You can enable more by calling setup for them inside of config/mini-nvim.lua
 
+## Sessions
+I've added sessions, via the mini.sessions plugin. You can open your most recent session through the Dashboard by pressing "s". It saves your session inside of a Session.vim file, that's why I added it to the .gitignore file!
