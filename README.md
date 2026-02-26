@@ -185,8 +185,10 @@ The parts explained by me, a Hochstapler: <br>
 ok...... I AM STUPIDDD. OFC I WOULD NEED TO CALL SETUP ON THE <br> PLUGINS!!!!!. FORGET EVERYTHING I WROTE BEFORE THIS!!!!!!! The statements are all not valid :) <br>
 
 The thing I enabled: 
-- mini-move: enables moves with \<alt\>h/j/k/l
+- mini-move: enables move of lines with \<alt\>h/j/k/l
 - mini-pairs: does autopairs for ([{'""'}]), doesn't do them inside of comment lines!!
+- mini.dashboard: fancy dashboard (see Dashboard)
+- mini.sessions: sessions (See sessions)
 
 If you want to add more, have a look at: https://github.com/nvim-mini/mini.nvim <br>
 You can enable more by calling setup for them inside of config/mini-nvim.lua

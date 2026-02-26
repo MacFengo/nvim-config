@@ -9,7 +9,10 @@ require('mini.sessions').setup()
 
 vim.api.nvim_create_autocmd({'ExitPre'}, {
   callback = function()
-    MiniSessions.write()
+    local info = MiniSessions.detected
+    if info and info.current then
+      MiniSessions.write(info.current)
+    end
   end,
 })
 

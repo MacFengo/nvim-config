@@ -11,7 +11,7 @@ require("nvim-treesitter").install({'c', 'cpp','markdown'})
 
 -- highlighting, add file types here
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'c', 'lua', 'cpp', 'md'},
+    pattern = { 'c', 'lua', 'cpp', 'md', 'h', 'hpp'},
     callback = function() vim.treesitter.start() end,
 })
 
