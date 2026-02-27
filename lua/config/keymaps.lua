@@ -64,6 +64,8 @@ keymap.set('i', '<C-Space>', function()
   vim.lsp.completion.get()
 end)
 
+
+
 -- ===================================================================
 -- key maps for LSP usage
 
